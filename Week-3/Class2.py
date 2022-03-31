@@ -58,6 +58,9 @@ print(s1.__data1)
      __feet = 0
      __inches = 0
      def __init__(self, *args):  # as in c++ and java we define constructors similarly to declare construtor in python we use ( __init__ ) 
+          if len(args)==0:  # if no arguments are passed make both feet and inches to zero 
+               self.__feet= 0
+               self.__inches= 0.0
           if len(args)==1: # if only one value is givenn it means the value is given in metres therefore following functions would take place
                ft = int(ags[0] *3.2808) # to convert metre in feet 
                inch = (args[0] *3.2808 - ft) *12 # to convert metre in inches
@@ -71,7 +74,7 @@ print(s1.__data1)
           self.__feet = feet
           self.__inches = inches
      def show(self):
-          print(self.__feet,"'",self.__inches.'"')
+          print(str(self.__feet)+"'"+str(round(self.__inches,1))+'"')
      def input1(self):
           self.__feet=int(input("enter feet: "))
           self.__inches= int(input("enter inches: "))
