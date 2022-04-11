@@ -1,3 +1,2 @@
 # PythonCourse
 
-a SAHG
